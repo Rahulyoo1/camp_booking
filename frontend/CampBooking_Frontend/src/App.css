@@ -1,0 +1,392 @@
+.app-frame {
+  min-height: 100vh;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 5vw;
+  backdrop-filter: blur(8px);
+  background: rgba(247, 242, 230, 0.88);
+  border-bottom: 1px solid var(--border);
+}
+
+.logo-mark {
+  text-decoration: none;
+  color: var(--heading);
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-links a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 0.2rem;
+}
+
+.nav-links a.active {
+  color: var(--heading);
+  border-bottom-color: var(--accent);
+}
+
+.header-side {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.user-pill {
+  background: #ece3d2;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+
+.main-content {
+  padding: 2rem 5vw 3rem;
+}
+
+.page-shell {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.page-shell.narrow {
+  max-width: 520px;
+}
+
+.hero-banner {
+  padding: 2.2rem;
+  border-radius: 24px;
+  background: linear-gradient(120deg, rgba(37, 82, 61, 0.95), rgba(109, 74, 42, 0.92));
+  color: #f8f3e8;
+  box-shadow: 0 25px 40px rgba(37, 82, 61, 0.18);
+  margin-bottom: 1.4rem;
+}
+
+.hero-banner h1 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.7rem, 3.3vw, 2.4rem);
+}
+
+.hero-banner p {
+  margin: 0;
+  opacity: 0.92;
+}
+
+.search-panel {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(140px, 1fr));
+  gap: 0.85rem;
+  align-items: end;
+  padding: 1rem;
+  margin: 1.2rem 0;
+  background: var(--panel-bg);
+  border-radius: 18px;
+  border: 1px solid var(--border);
+}
+
+.search-panel label,
+.stack-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--heading);
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid #d5cbb9;
+  background: #fffbf4;
+  color: #2b2a24;
+  font-family: inherit;
+  padding: 0.65rem 0.75rem;
+  box-sizing: border-box;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid rgba(37, 82, 61, 0.35);
+  border-color: rgba(37, 82, 61, 0.35);
+}
+
+.btn {
+  border: none;
+  border-radius: 12px;
+  padding: 0.7rem 1rem;
+  background: var(--accent);
+  color: #f9f5ea;
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.btn.ghost {
+  background: #e4d7c1;
+  color: #3a3429;
+}
+
+.btn.warning {
+  background: #a83f2d;
+}
+
+.camp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.camp-card {
+  border: 1px solid var(--border);
+  background: #fffdf8;
+  border-radius: 18px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.camp-card img {
+  height: 170px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.camp-content {
+  padding: 0.95rem;
+}
+
+.camp-content h3 {
+  margin: 0 0 0.2rem;
+}
+
+.muted {
+  color: #706651;
+  font-size: 0.9rem;
+}
+
+.price {
+  color: #2f6a4f;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.rating-line {
+  margin: 0.4rem 0 0.8rem;
+  font-size: 0.9rem;
+}
+
+.empty-state {
+  padding: 1rem;
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+}
+
+.pagination {
+  margin-top: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.pagination button {
+  border: 1px solid #d1c5b3;
+  background: #fdf8ee;
+  color: #292620;
+  border-radius: 10px;
+  padding: 0.45rem 0.8rem;
+  cursor: pointer;
+}
+
+.summary-card {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: #fffefb;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.stack-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.auth-footnote {
+  margin-top: 0.9rem;
+  font-size: 0.92rem;
+}
+
+.auth-footnote a {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.search-by-reference {
+  display: flex;
+  gap: 0.7rem;
+  margin-bottom: 1rem;
+}
+
+.search-by-reference input {
+  max-width: 280px;
+}
+
+.action-row {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.rating-block {
+  margin-top: 1rem;
+}
+
+.star-rating {
+  display: flex;
+  gap: 0.3rem;
+  margin-bottom: 0.7rem;
+}
+
+.star-rating button {
+  border: none;
+  font-size: 1.6rem;
+  background: transparent;
+  color: #c7b9a5;
+  cursor: pointer;
+}
+
+.star-rating button.active {
+  color: #c3852d;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.7rem;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  margin-top: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fffefb;
+  border: 1px solid var(--border);
+}
+
+th,
+td {
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  padding: 0.7rem;
+}
+
+.table-actions {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.admin-layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 1rem;
+}
+
+.admin-sidebar {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #fffefb;
+  padding: 0.8rem;
+  height: fit-content;
+}
+
+.admin-sidebar a {
+  display: block;
+  padding: 0.45rem 0;
+  text-decoration: none;
+  color: var(--heading);
+  font-weight: 600;
+}
+
+.camp-detail-image {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+}
+
+@media (max-width: 900px) {
+  .site-header {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .admin-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .search-panel {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .search-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .search-by-reference {
+    flex-direction: column;
+  }
+
+  .search-by-reference input {
+    max-width: 100%;
+  }
+}
