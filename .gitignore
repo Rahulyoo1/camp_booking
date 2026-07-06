@@ -26,7 +26,6 @@ coverage/
 
 # Env files (keep only examples in git)
 .env
-.env.*
 !.env.example
 !.env.development.example
 !.env.production.example
