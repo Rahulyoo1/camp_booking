@@ -68,4 +68,4 @@ jobs:
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_YELLOW_WAVE_0D33CD900 }}
           action: "close"
-          app_location: "./frontend/CampBooking_Frontend/dist"
+          
